@@ -12,8 +12,6 @@ c = a
 a = b
 b = c
 
-
-
 # Write your code above this line 👆
 ####################################
 
