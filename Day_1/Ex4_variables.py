@@ -18,3 +18,6 @@ b = c
 # 🚨 Don't change the code below 👇
 print("a: " + a)
 print("b: " + b)
+
+# if __name__ == '__main__':
+#    main()
