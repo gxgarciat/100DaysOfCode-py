@@ -27,7 +27,20 @@ print("Your mission is to find the treasure.")
 
 # Write your code below this line 👇
 
+decision = input("Do you want to go Left (L) or Right (R) ? ")
 
+if decision == 'R':
+    print("Game Over.")
+else:
+    decision = input("Do you want to swim (S) or wait (W) ? ")
+    if decision == 'S':
+        print("Game Over.")
+    else:
+        decision = input("Which door do you want blue (B), red (R) or yellow (Y) ? ")
+        if decision == 'B' or decision == 'R':
+            print("Game Over.")
+        else:
+            print("You win.")
 
 # if __name__ == '__main__':
 #     main()
