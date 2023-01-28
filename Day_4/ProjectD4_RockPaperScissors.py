@@ -42,7 +42,18 @@ print(f"{options[userSelection]} \n Computer chose: \n {options[computerChoice]}
 
 if userSelection == computerChoice:
     print("It's a draw.")
-
+elif userSelection == 0 and computerChoice == 1:
+    print("Computer wins.")
+elif userSelection == 1 and computerChoice == 0:
+    print("User wins.")
+elif userSelection == 0 and computerChoice == 2:
+    print("User wins.")
+elif userSelection == 2 and computerChoice == 0:
+    print("Computer wins.")
+elif userSelection == 1 and computerChoice == 2:
+    print("Computer wins.")
+elif userSelection == 2 and computerChoice == 1:
+    print("User wins.")
 
 # if __name__ == '__main__':
 #     main()
