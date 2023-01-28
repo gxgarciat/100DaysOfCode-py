@@ -1,3 +1,10 @@
+# Import the random module here
+import random
+
+# Implement the game Rock Paper Scissors
+
+# Write your code below this line 👇
+
 rock = '''
     _______
 ---'   ____)
@@ -25,9 +32,17 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
+# Write your code below this line 👇
+options = [rock, paper, scissors]
 
-userSelection = input("What do you choose")
+userSelection = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
+
+computerChoice = random.randint(0, 2)
+print(f"{options[userSelection]} \n Computer chose: \n {options[computerChoice]}")
+
+if userSelection == computerChoice:
+    print("It's a draw.")
+
 
 # if __name__ == '__main__':
 #     main()
