@@ -8,8 +8,12 @@
 
 # Write your code below this row 👇
 
+evens=0
 
+for i in range(0,101,2):
+    evens = evens + i
 
+print(evens)
 
 # if __name__ == '__main__':
 #     main()
