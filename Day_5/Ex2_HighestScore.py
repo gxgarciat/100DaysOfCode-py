@@ -14,7 +14,7 @@ print(student_scores)
 max = 0
 
 for i in student_scores:
-    if i >= max:
+    if i > max:
         max = i
 
 print(f"The highest score in the class is: {max}")
