@@ -33,29 +33,29 @@ for k in range(0, nr_numbers):
 if mode == 'N' or mode == 'n':
     passGen = ''.join(passGen)
 else:
-    # random.shuffle(passGen)
-    # passGen = ''.join(passGen)
-    i = nr_letters
-    j = nr_symbols
-    k = nr_numbers
-    for l in range(0, sizePassword):
-        branch = random.randint(0, 2)
-        print("Branch",branch)
-        if branch == 0 or i != 0:
-            randomPos = random.randint(0, sizeLetters - 1)
-            passGen.append(letters[randomPos])
-            i = i - 1
-            print(i)
-        elif branch == 1 or j != 0:
-            randomPos = random.randint(0, sizeSymbols - 1)
-            passGen.append(symbols[randomPos])
-            j = j - 1
-            print(j)
-        elif branch == 2 or k != 0:
-            randomPos = random.randint(0, sizeNumbers - 1)
-            passGen.append(numbers[randomPos])
-            k = k - 1
-            print(k)
+    random.shuffle(passGen)
+    passGen = ''.join(passGen)
+    # i = nr_letters
+    # j = nr_symbols
+    # k = nr_numbers
+    # for l in range(0, sizePassword):
+    #     branch = random.randint(0, 2)
+    #     print("Branch",branch)
+    #     if branch == 0 or i != 0:
+    #         randomPos = random.randint(0, sizeLetters - 1)
+    #         passGen.append(letters[randomPos])
+    #         i = i - 1
+    #         print(i)
+    #     elif branch == 1 or j != 0:
+    #         randomPos = random.randint(0, sizeSymbols - 1)
+    #         passGen.append(symbols[randomPos])
+    #         j = j - 1
+    #         print(j)
+    #     elif branch == 2 or k != 0:
+    #         randomPos = random.randint(0, sizeNumbers - 1)
+    #         passGen.append(numbers[randomPos])
+    #         k = k - 1
+    #         print(k)
 
 
         print(l)
