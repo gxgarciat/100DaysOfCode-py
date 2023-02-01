@@ -97,6 +97,7 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
         if attemptsLeft == 0:
             print("Game over.")
     else:
+
         print(userGuess,len(hangmanpics))
 
 
