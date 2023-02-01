@@ -75,8 +75,10 @@ print()
 
 # userSelection = input("Guess a letter: ")
 # userSelection = userSelection.lower()
+i = 0 # To count mistakes
+attemptsLeft = 7
 
-for i in range(0,len(hangmanpics)):
+while attemptsLeft != 0: #in range(0,len(hangmanpics)):
     userSelection = input("Guess a letter: ")
     userSelection = userSelection.lower()
 
@@ -88,12 +90,12 @@ for i in range(0,len(hangmanpics)):
 
     userGuess = chosen_word.count(userSelection)
     if userGuess == 0:
-        attemptsLeft = len(hangmanpics) - i
-        print(f"You have {attemptsLeft} attempts left.")
-        print(hangmanpics[i])
+        attemptsLeft = attemptsLeft - 1
+        print(f"You have {attemptsLeft} mistakes left.")
+        print(hangmanpics[-attemptsLeft-1])
+
         if attemptsLeft == 0:
             print("Game over.")
-
     else:
         print(userGuess,len(hangmanpics))
 
