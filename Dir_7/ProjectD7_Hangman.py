@@ -2,6 +2,7 @@ import random
 # Step 1
 
 word_list = ["aardvark", "baboon", "camel"]
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 hangmanpics = ['''
   +---+
@@ -59,13 +60,43 @@ hangmanpics = ['''
 # Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
 
 chosen_word = word_list[random.randint(0,len(word_list))-1]
-print(chosen_word)
 
-userSelection = input("Guess a letter: ")
-userSelection = userSelection.lower()
+print("***",chosen_word)
 
-userGuess = chosen_word.count(userSelection)
-print(userGuess,hangmanpics[0],hangmanpics[4])
+wordToGuess = "_"
+
+for i in range(0,len(chosen_word)):
+    wordToGuess = wordToGuess + "_"
+
+print(f"Your word contains {len(chosen_word)} letters in total:")
+print()
+print(wordToGuess)
+print()
+
+# userSelection = input("Guess a letter: ")
+# userSelection = userSelection.lower()
+
+for i in range(0,len(hangmanpics)):
+    userSelection = input("Guess a letter: ")
+    userSelection = userSelection.lower()
+
+    while alphabet.count(userSelection) == 0:
+        print("You already tried that letter before.")
+        userSelection = input("Guess a letter: ")
+
+    alphabet = alphabet.replace(userSelection,'')
+
+    userGuess = chosen_word.count(userSelection)
+    if userGuess == 0:
+        attemptsLeft = len(hangmanpics) - i
+        print(f"You have {attemptsLeft} attempts left.")
+        print(hangmanpics[i])
+        if attemptsLeft == 0:
+            print("Game over.")
+
+    else:
+        print(userGuess,len(hangmanpics))
+
 
 # if __name__ == '__main__':
 #     main()
