@@ -73,8 +73,6 @@ print()
 print(wordToGuess)
 print()
 
-# userSelection = input("Guess a letter: ")
-# userSelection = userSelection.lower()
 i = 0 # To count mistakes
 attemptsLeft = 7
 shownWord = ""
@@ -105,23 +103,22 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
         for letter in chosen_word:
             if letter != userSelection:
                 shownWord = shownWord + "_"
-                #print(letter,userSelection)
-                #print("1here",shownWord)
             else:
                 shownWord = shownWord + letter
-                #print("2there",shownWord)
         for letter in guessedLetters:
-        #     #shownWord = ""
-        #
-             if letter != userSelection:
+            if letter != userSelection:
                 print("Here")
-                # shownWord = shownWord + "_"
-        #         #print("1here",shownWord)
-             else:
-                print("there")
-        #         shownWord = shownWord + letter
-        #         #print("2there",shownWord)
-        #     print(shownWord)
+            else:
+                i = i + 1
+                # if i == len(chosen_word):
+                #     print("there",i)
+                #     while True:
+                #         break()
+                while False:
+                    # # Code
+                    # if i == len(chosen_word):
+                    #     break
+                    # # Code
         print(shownWord)
         shownWord = ""
 
