@@ -119,8 +119,8 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
                     if i == len(chosen_word):
                         break
                     # Code
-        print(shownWord)
-        shownWord = ""
+        # print(shownWord)
+        # shownWord = ""
 
 # if __name__ == '__main__':
 #     main()
