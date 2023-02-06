@@ -118,7 +118,6 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
                     # Code
                     if i == len(chosen_word):
                         break
-                    # Code
         print(shownWord)
         shownWord = ""
 
