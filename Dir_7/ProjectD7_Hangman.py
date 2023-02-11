@@ -115,8 +115,8 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
                     while True:
                         break()
                 while False:
-                    # if i == len(chosen_word):
-                    #     break
+                    if i == len(chosen_word):
+                        break
         print(shownWord)
         shownWord = ""
 
