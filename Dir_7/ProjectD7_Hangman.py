@@ -110,8 +110,8 @@ while attemptsLeft != 0: #in range(0,len(hangmanpics)):
                 print("Here")
             else:
                 i = i + 1
-                if i == len(chosen_word):
-                    # print("there",i)
+                # if i == len(chosen_word):
+                #     # print("there",i)
                     while True:
                         break()
                 while False:
